@@ -39,7 +39,7 @@ position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 `;
 
 const Mbox=styled.div`
@@ -134,16 +134,18 @@ const Components = () => {
      <Text>멋쟁이사자처럼 11기 여러분의 소중한 추억들을 보관합니다.😎</Text>
      <p>게시물 {num}개</p>
      </Alltext>
+     <CBack>
       {peed.map((element)=>{
         return (
-        <CBack>
+          <One>
           <Link to ={`/article/${element.id}`}>
           <BoxEach src={element.imageURL}/></Link>
           <CTitle>{element.imageName}</CTitle>
           <CText>{element.imageText}</CText>
-        </CBack>
+          </One>
       )
         })}
+        </CBack>
      </Mbox>
      </Back>
         </>
